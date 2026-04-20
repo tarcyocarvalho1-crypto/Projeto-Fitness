@@ -1,0 +1,35 @@
+body{
+    background: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.raio{
+    color: #fff;
+    font-family: serif;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #00d2ff,
+    0 0 40px #3a7bd5,
+    0 0 80px #3a7bd5;
+}
+
+.tremor{
+    filter: url(#distort);
+    animation: flash 1s infinite ;
+}
+@keyframes flash{
+    0% { opacity: 1; transform: translate(1px, 1px);}
+    50% { opacity: 0.8; transform: translate(-2px, 1px);}
+    100% { opacity: 1; transform: translate(0, 0);}
+}

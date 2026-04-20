@@ -1,0 +1,26 @@
+@media  screen and (max-width: 600px) {
+    .navbar{
+        font-size: 5% !important;
+        margin-top: 10% !important;
+        /* text-align: center !important; */
+        display: block !important;  
+    }
+    #fonte1{
+        font-size: 15px !important;
+        margin-bottom: 16% !important;
+    }
+    .fon{
+        font-size: 25px !important;
+    }
+    .navbar a{
+        display: none !important;
+       
+    }
+
+
+
+
+    
+}
+
+
