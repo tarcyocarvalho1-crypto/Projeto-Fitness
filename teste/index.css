@@ -1,35 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bpmf+Zihi+Kai+Std&family=Pacifico&display=swap');
+
 body{
-    background: #050505;
+    background: black;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
 }
-
-
-
-.raio{
-    color: #fff;
-    font-family: serif;
-    font-size: 5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    text-shadow: 
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #00d2ff,
-    0 0 40px #3a7bd5,
-    0 0 80px #3a7bd5;
+form{
+    background: rgb(19, 20, 20);
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5%;
+    margin: 1%;
+    border-radius: 9px;
 }
+input{
+    width: 90%;
+    right: 50px;
+    margin: 1%;
+    padding: 15px;
+    margin-right: 20px;
+    margin-top: 10px;
 
-.tremor{
-    filter: url(#distort);
-    animation: flash 1s infinite ;
 }
-@keyframes flash{
-    0% { opacity: 1; transform: translate(1px, 1px);}
-    50% { opacity: 0.8; transform: translate(-2px, 1px);}
-    100% { opacity: 1; transform: translate(0, 0);}
+label{
+    font-family: pacifico ;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(5, 57, 117);
+    font-size: 40px;
+}
+button{
+    max-width: max-content;
+    text-align: center;
+    justify-content: center;
 }
