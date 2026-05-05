@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bpmf+Zihi+Kai+Std&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bpmf+Zihi+Kai+Std&family=Domine:wght@400..700&family=Pacifico&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 *{
@@ -15,8 +15,7 @@
     flex-flow: row wrap;
     height: 100%;
     /* background:gray; */
-    justify-content: center;
-    align-items: center;
+   
     
 }
 
@@ -30,7 +29,7 @@
     font-family: "Pacifico", cursive;
     
     color:rgb(53, 89, 104);
-    font-size: 20px;
+    font-size: 25px;
     
 
 }
@@ -81,7 +80,7 @@
     color:rgb(53, 89, 104);
 }
   
-section{
+.section1{
 
     
     /* border-top: 2px solid rgb(165, 12, 12); */
@@ -258,8 +257,46 @@ header{
     transform: scale(1.05);
     transition: 0.5s;
 }
+.cont1{
+    /* border: 1px solid green; */
+    margin-bottom: 3%;
 
 
+}
+.redes{
+    display: flex;
+    color: rgb(53, 89, 104);
+    font-family: "Bpmf Zihi Kai Std", sans-serif;
+}
+.classe2{
+    /* background: white; */
+
+    /* border:1px solid red; */
+    width: 900px;
+    padding: 1%;
+    display: block;
+    margin-left:  7%;
+    margin-bottom: 10%;
+    margin-top: 1%;
+
+}
+.cont{
+    color:rgb(53, 89, 104);
+    margin: 2%;
+    font-style: italic;
+    display: flex;
+}
+.foo{
+    color:red;
+}
+.c1{
+    
+    color: white;
+     font-family: "PT Serif", serif;
+}
+.c1:hover{
+    color: rgb(53, 89, 104);
+}
 
 
 

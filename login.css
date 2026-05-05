@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bpmf+Zihi+Kai+Std&family=Pacifico&display=swap');
+
+body{
+    justify-content: center;
+    align-items: center; 
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+
+  
+}
+#navbar{
+    color:rgb(53, 89, 104) !important;
+    margin-top: 2% !important;
+    display: flex !important;
+    flex-flow: row wrap !important;
+    height: 100% !important;
+    /* background:gray; */
+    justify-content: top;
+    font-family: "Pacifico", cursive;
+    animation: piscar 2s infinite;    
+}
+@keyframes piscar{
+     0%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+#bora{
+  
+     margin-top: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    
+    height: 100%;
+    /* background:gray; */
+    /* justify-content: center;
+    align-items: center; */
+    text-align: left;
+    margin-right: 5%;
+    
+}
+
+form{
+    
+    background: rgb(19, 20, 20);
+    display: flex; 
+    flex-flow: column wrap;
+    padding: 5%;
+    margin: 1%;
+    border-radius: 9px;
+
+}
+form:hover{
+    background: black;
+    border: 1px solid rgb(44, 46, 46);;
+}
+input{
+    background: none;
+    border: 1px solid rgb(153, 151, 145);
+    border-radius: 5px;
+    width: 90%;
+    right: 50px; 
+    margin: 1%;
+    padding: 15px;
+    margin-right: 20px; 
+    margin-top: 10px; 
+  
+    font-size: larger;
+    color:white;
+    
+}
+input:invalid{
+    border:2px solid rgb(43, 34, 34);
+}
+input:hover{
+    border: 2px solid rgb(48, 47, 47);
+    border-radius: 4px;
+}
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(158, 166, 175);
+    font-size: 50px;
+    animation: login 1.4s infinite;
+
+}
+@keyframes login{
+    0%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0.2;    
+    }
+
+    
+}
+
+button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(170, 180, 184);
+    background: none;
+    border: none;
+    max-width: max-content;
+    font-size: 20px;
+    margin: 2%;
+
+}
+button:hover{
+
+    color: rgb(80, 98, 114);
+    font-size: 23px;
+    
+}
+.forme{
+    color: rgb(170, 176, 182);
+    text-decoration: none;
+    margin: 5%;
+    font-size: 15px;
+
+}
+.forme:hover{
+    font-size: 20px;
+    max-width: max-content;
+}
