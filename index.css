@@ -132,7 +132,7 @@
     transition: 0.5s;}
 
 .img1{
-    
+    border-radius: 10px;
     display: flex;
     width: 100%;
     
@@ -260,7 +260,7 @@ header{
 .cont1{
     /* border: 1px solid green; */
     margin-bottom: 3%;
-
+    margin-top: 5%;
 
 }
 .redes{
@@ -290,12 +290,24 @@ header{
     color:red;
 }
 .c1{
-    
+    margin-left: 3%;
     color: white;
      font-family: "PT Serif", serif;
 }
 .c1:hover{
     color: rgb(53, 89, 104);
+}
+.foo{
+  display: flex;
+ padding: 2%;
+ 
+
+
+}
+.foo1{
+    margin-left: 7%;
+    font-size:20px;
+    color: azure;
 }
 
 

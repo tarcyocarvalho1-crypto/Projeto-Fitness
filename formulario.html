@@ -9,24 +9,35 @@
 <body>
    
         <header>
-            <form>
+            <form id="meuFormulario"> 
                 <label>Faça seu cadastro</label>
-                 <input type="text" name="Nome" placeholder="Nome completo" required autocomplete="off">
+                 <input type="text" name="nome" placeholder="Nome completo" required autocomplete="off">
                  <input type="email" name="email" placeholder="Exemplo@gmail.com" required autocomplete="off">
-                 <input type="password" name="Senha" placeholder="Digite sua Senha" required autocomplete="off">
+                 <input type="password" name="senha" placeholder="Digite sua Senha" required autocomplete="off">
 
-                 <input type="date" name="Data" required autocomplete="off" style="color: #fcfeff;">
+                 <input type="date" name="data" required autocomplete="off">
 
-                 <input type="tel" name="Contato" placeholder="Digite seu numero" required autocomplete="off">
-                 <input type="text"name="CPF" placeholder="000.000.000-00" required autocomplete="off">
-                 <input type="text" name="Peso" placeholder="Coloque seu peso" autocomplete="off">
-                 <input type="text" name="Altura" placeholder="Altura" autocomplete="off">
+                 <input type="tel" name="contato" placeholder="Digite seu numero" required autocomplete="off">
+                 <input type="text"name="cpf" placeholder="000.000.000-00" required autocomplete="off">
+                 <input type="text" name="peso" placeholder="Coloque seu peso" autocomplete="off">
+                 <input type="text" name="altura" placeholder="Altura" autocomplete="off">
                  <button type="submit" >Comfimar</button>
 
             </form>
         </header>
    
 
+
+
+<script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+  window.supabase = createClient(
+    'https://ollomeqxtoxjdzbfmwqw0.supabase.co',
+    'sb_publishable_JgQRyxzzVsKErheY60mlEw_DojU84xs'
+  );
+</script>
+
+<script src="formulario.js" defer></script>
 
 
 

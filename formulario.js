@@ -1,55 +1,37 @@
-const supabaseUrl = 'https://ollmeqxtoxjdzbfmwqwo.supabase.co'
-const supabaseKey = 'sb_publishable_JgQRyxzzVsKErheY60mlEw_DojU84xs'
-const db = supabase = createClient(supabaseUrl, supabaseKey)
-
-const handleCadastro = async (dadosDoFormulario) => {
-  const { data, error } = await db
-    .from('perfis_usuarios') // Nome da tabela que criamos
-    .insert([
-      { 
-        nome_completo: dadosDoFormulario.nome,
-        email: dadosDoFormulario.email,
-        senha: dadosDoFormulario.senha,
-        data_nascimento: dadosDoFormulario.dataNascimento,
-        telefone: dadosDoFormulario.contato,
-        cpf: dadosDoFormulario.cpf,
-        peso: dadosDoFormulario.peso,
-        altura: dadosDoFormulario.altura
-      },
-    ])
-
-  if (error) {
-    console.error('Erro ao cadastrar:', error.message)
-    alert('Erro ao realizar cadastro!')
-  } else {
-    console.log('Usuário cadastrado com sucesso:', data)
-    alert('Cadastro realizado!')
-  }
-}
+// Supabase client criado no formulario.html e salvo em window.supabase
+const supabase = window.supabase;
 
 
+const formulario = document.querySelector('#meuFormulario');
 
-// Espera o clique no botão
-document.querySelector('button').addEventListener('click', (e) => {
-  e.preventDefault();// Impede a página de recarregar
+formulario.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Não deixa a página recarregar
 
- // Dentro da sua função de cadastro, onde você pega os valores:
-const nome = document.querySelector('input[name="Nome"]').value;
-const email = document.querySelector('input[name="email"]').value;
-const senha = document.querySelector('input[name="Senha"]').value;
-const dataNascimento = document.querySelector('input[name="Data"]').value;
-const cpf = document.querySelector('input[name="CPF"]').value;
-const contato = document.querySelector('input[name="Contato"]').value;
-const peso = document.querySelector('input[name="Peso"]').value;
-const altura = document.querySelector('input[name="Altura"]').value;
+    // Cria um objeto com todos os dados do formulário automaticamente
+    const dadosForm = new FormData(formulario);
+    
+    // Organiza os dados para o formato que o banco de dados entende
+    const dadosParaEnviar = {
+        nome: dadosForm.get('Nome'),
+        email: dadosForm.get('email'),
+        senha: dadosForm.get('Senha'),
+        data: dadosForm.get('Data'),
+       contato: dadosForm.get('Contato'),
+        cpf: dadosForm.get('CPF'),
+        peso: Number(dadosForm.get('Peso')),
+        altura: Number(dadosForm.get('Altura'))
+    };
 
-console.log("Dados capturados:", { nome_completo, email, senha, data_nascimento, cpf, contato, peso, altura});
+    // Envia para a sua tabela no banco de dados
+    const { data, error } = await supabase
+        .from('Usuarios')
+        .insert([dadosParaEnviar]);
 
-// Agora passa TODOS os campos para a função de cadastro
-handleCadastro({nome, email, senha, dataNascimento, cpf, contato, peso, altura});
-
-// Agora você pode usar essas variáveis para enviar ao Supabase
-console.log("Dados capturados:", { nome, email, senha, dataNascimento, cpf });
+    if (error) {
+        console.error('Erro ao cadastrar:', error.message);
+        alert('Ocorreu um erro no cadastro!');
+    } else {
+        alert('Cadastro realizado com sucesso, patrão!');
+        formulario.reset();
+    }
 });
-
-
