@@ -1,4 +1,4 @@
-// Supabase client criado no formulario.html e salvo em window.supabase
+    // Supabase client criado no formulario.html e salvo em window.supabase
 const supabase = window.supabase;
 
 

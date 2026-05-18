@@ -15,9 +15,17 @@
     flex-flow: row wrap;
     height: 100%;
     /* background:gray; */
+
    
-    
 }
+
+.menu{
+    color: aliceblue;
+    
+    text-align: left;
+    padding: 1px 10px;
+}
+
 
 
 .logo{
@@ -56,7 +64,12 @@
 }
 .inicio1{
     text-align: center;
-    margin-top: 15%;
+    /* centraliza melhor no mobile */
+    margin-top: 6%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #fonte1{
     font-family: "Pacifico", cursive;
@@ -177,13 +190,20 @@ header{
 
 
 .seç12{
+    /* container do carrossel */
     text-align: center;
-    display: grid;
     display: flex;
-    margin-right: 5%;
-    margin: 5%;
-    color: aqua;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 0;              /* remove margens que podem “quebrar” */
+    padding: 10px 0;       /* mantém espaço interno */
+    width: 100%;
+
+   
 }
+
 .seç12 :hover{
     transform: scale(1.05);
     transition: 0.5s;
@@ -192,14 +212,29 @@ header{
 .para12{
     font-family: 'montserrat', sans-serif;
     font-weight: 800;
-    max-width: 100%;
-    display: inline-block;
-    width: 30%;
+    width: 23%;
     padding: 10px;
     margin: 10px;
-    /* border: 1px solid rgb(60, 52, 52); */
     border-radius: 6px;
+    /* card em linha */
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    flex: 0 0 auto;
 }
+
+.seç12{
+    /* container do carrossel */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  
+    padding: 0 10px;
+    width: 100%;
+}
+
 .para13{
     text-align:default;
     color: rgb(88, 132, 137);
@@ -227,28 +262,32 @@ header{
 }
 
 .ac1{
-    text-align: center;
-    display: grid;
-    display: flex;
-    margin-right: 5%;
-    margin: 5%;
-    /* border: 1px solid rgb(255, 255, 255); */
+    width: 23%;
+    padding: 10 5 10;
+    margin: 10%;
+    border-radius: 6px;
+  
+   
+     /* border: 1px solid rgb(255, 255, 255);  */
    
 }
 .img-ac1{
     color: rgb(53, 89, 104);
     width: 20%;
+    justify-content: center;
+    text-align: center;
    
 }
 .ac2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: rgb(9, 9, 9);
-    padding: 10% 5% 10%;
-    margin: 1%;
-    border: 1px solid rgb(48, 47, 47);
-    color: rgb(255, 255, 255);
+    color: aliceblue;
+    display: inline-block;
+    padding: 3%;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 10px;
     font-size: 20px;
-    border-radius: 6%;
+    
 }
 .ac2:hover{
     background: rgb(7, 7, 7);

@@ -1,9 +1,21 @@
 @media  screen and (max-width: 600px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+    }
+    body{
+        overflow-x: hidden;
+    }
+   
+    
     .navbar{
         font-size: 5% !important;
         margin-top: 10% !important;
         /* text-align: center !important; */
         display: block !important;  
+        overflow: none;
     }
     #fonte1{
         font-size: 15px !important;
@@ -11,16 +23,72 @@
     }
     .fon{
         font-size: 25px !important;
+        animation: none;
     }
-    .navbar a{
-        display: none !important;
+    .item-carrossel{
+        overflow: none;
+        display: block;
+        display: inline;
+        margin: 1%;
+      
        
     }
+    #faisca{
+        display: grid;
+        font-size: 45px;
+        text-align: center;
+        margin: 1%;
+    }
+    
+    .seç12{
+       text-align: center;
+       flex-direction: column;
+        margin: 1%;
+        
+       
+        max-width: 100%;
+        
+    }
+    .para12{
+        justify-items: center;
+        border: 1px solid rgb(85, 81, 81);
+        width: 250px;
+    }
+.para13{
+   
+    text-align: justify;
+}
+
+
+   
+    
+    
+    .inicio1{
+        margin-bottom: 5%;
+        text-align: center;
+
+    }
+.ac1{
+      display: block;
+        display: inline;
+        margin: 1%;
+        text-align: center;
+       
+}
+
+.ac2{
+    margin: 2%;
+       max-width: 300px;
+        
+   
+    
+}
 
 
 
 
     
+
+
+
 }
-
-
