@@ -1,16 +1,16 @@
-    // Supabase client criado no formulario.html e salvo em window.supabase
-const supabase = window.supabase;
-
-
+const SUPABASE_URL = "https://srfzlkzhmkyiaqnyohpv.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_X1Z63IiOWK_qeKNxRHOUxw_ptwVCgI8";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const formulario = document.querySelector('#meuFormulario');
 
+if (!formulario) {
+    console.error('Formulário (#meuFormulario) não encontrado.');
+} else {
 formulario.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Não deixa a página recarregar
+    e.preventDefault();
 
-    // Cria um objeto com todos os dados do formulário automaticamente
     const dadosForm = new FormData(formulario);
-    
-    // Organiza os dados para o formato que o banco de dados entende
+
     const dadosParaEnviar = {
         nome: dadosForm.get('nome'),
         email: dadosForm.get('email'),
@@ -22,16 +22,23 @@ formulario.addEventListener('submit', async (e) => {
         altura: dadosForm.get('altura') ? Number(dadosForm.get('altura')) : null
     };
 
-    // Envia para a sua tabela no banco de dados
-    const { data, error } = await supabase
-        .from('Usuarios')
-        .insert([dadosParaEnviar]);
+    try {
+        const { data, error } = await supabaseClient
+            .from('usuarios')
+            .insert([dadosParaEnviar]);
 
-    if (error) {
-        console.error('Erro ao cadastrar:', error.message);
-        alert('Ocorreu um erro no cadastro!');
-    } else {
-        alert('Cadastro realizado com sucesso, patrão!');
+        if (error) throw error;
+
+        alert('Cadastro realizado com sucesso, meu patrão!');
         formulario.reset();
+    } catch (error) {
+        console.error('Erro ao salvar no Supabase:', error);
+        alert('Erro ao salvar: ' + (error?.message || error));
     }
 });
+}
+
+
+
+
+

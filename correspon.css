@@ -41,13 +41,12 @@
     }
     
     .seç12{
-       text-align: center;
+        justify-content: center;
+       justify-items: center;
        flex-direction: column;
-        margin: 1%;
-        
+       margin: 1%;
+       max-width: 100%;
        
-        max-width: 100%;
-        
     }
     .para12{
         justify-items: center;
