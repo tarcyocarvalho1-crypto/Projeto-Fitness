@@ -19,13 +19,14 @@
     flex-flow: row wrap;
     height: 100%;
     /* background:gray; */
+    
 
    
 }
 /* Mostrar o botão em telas maiores também.
    O comportamento de colapsar/expandir do menu é feito pelo JS. */
 .menu-toggle{
-    display: inline-flex !important;
+    display: none !important;
 
 }
 
