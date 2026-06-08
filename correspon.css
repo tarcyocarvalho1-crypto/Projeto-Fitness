@@ -7,7 +7,7 @@
        
     }
     body{
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
    .menu-toggle{ 
     display: flex !important;
@@ -50,7 +50,7 @@
         margin-top: 10% !important;
         /* text-align: center !important; */
         display: flex !important;  
-        overflow: none;
+       
         position: relative;
     }
     .logo{
@@ -70,8 +70,17 @@
         display: block;
         display: inline;
         margin: 1%;
+        font-size: 15px;
+        text-align: center;
       
        
+    }
+    .img1{
+        max-width: 90%;
+        display: inline;
+
+
+
     }
     #faisca{
         display: grid;
@@ -81,21 +90,27 @@
     }
     
     .seç12{
-        justify-content: center;
-       justify-items: center;
+       display: inline;
        flex-direction: column;
        margin: 1%;
        max-width: 100%;
        
     }
+
     .para12{
         justify-items: center;
         border: 1px solid rgb(85, 81, 81);
         width: 250px;
+        max-width: 100%;
+        justify-content: center;
+     
     }
 .para13{
-   
+     justify-content: center;
     text-align: justify;
+    justify-items: center;
+    max-width: 100%;
+    
 }
 
 
