@@ -62,25 +62,34 @@
         margin-bottom: 16% !important;
     }
     .fon{
-        font-size: 25px !important;
+        font-size: 30px !important;
         animation: none;
+        font-weight: bold
     }
     .item-carrossel{
-        overflow: none;
-        display: block;
+       
+        /* display: block; */
+        justify-content: ;
         display: inline;
         margin: 1%;
-        font-size: 15px;
-        text-align: center;
+      
+       
       
        
     }
     .img1{
-        max-width: 90%;
+        justify-items: center;
         display: inline;
+        margin: 5%;
 
 
 
+    }
+    .item3{
+       font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        margin: 2%;
+       display: none;
     }
     #faisca{
         display: grid;
