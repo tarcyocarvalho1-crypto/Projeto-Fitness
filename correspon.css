@@ -1,5 +1,5 @@
 
-@media  screen and (max-width: 600px) {
+@media  screen and (max-width: 680px) {
     *{
         margin: 0;
         padding: 0;
@@ -69,19 +69,18 @@
     .item-carrossel{
        
         /* display: block; */
-        justify-content: ;
+       
         display: inline;
         margin: 1%;
-      
-       
-      
-       
     }
+    .item-carrossel :hover{
+    transform: scale(1.50);
+    transition: 0.5s;}
     .img1{
         justify-items: center;
         display: inline;
         margin: 5%;
-
+        max-width: 60%;
 
 
     }
