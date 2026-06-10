@@ -87,6 +87,7 @@
     font-family: "Pacifico", cursive;
     font-size: 40px;
     animation: piscaRaio 2s infinite;
+    color:  rgb(15, 88, 104);
 }
 @keyframes piscaRaio{
     0%{

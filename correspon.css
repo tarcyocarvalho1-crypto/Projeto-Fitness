@@ -13,10 +13,11 @@
     display: flex !important;
     cursor: pointer;
     background: none;
-    color: rgb(68, 111, 114);
+    color: rgb(255, 255, 255);
     border: none;
     font-size: 24px;
     font-weight: bold;
+    margin: 2%;
    }
    .menu{
       display: none;
@@ -29,6 +30,10 @@
         padding: 10px 0;
         list-style: none;
         z-index: 1000; /*garante que o menu fique por cima*/
+   }
+   /*PROJETO FITNESS*/
+   .proj12{
+    color: rgb(197, 201, 204) !important;
    }
     .menu li {
         text-align: center;
@@ -60,11 +65,17 @@
     #fonte1{
         font-size: 15px !important;
         margin-bottom: 16% !important;
+        color: aliceblue !important;
+    }
+    #fonte1:hover{
+        color: rgb(187, 187, 189) !important;
     }
     .fon{
         font-size: 30px !important;
         animation: none;
-        font-weight: bold
+        font-weight: bold;
+        color: rgb(196, 200, 204);
+        
     }
     .item-carrossel{
        
@@ -74,13 +85,13 @@
         margin: 1%;
     }
     .item-carrossel :hover{
-    transform: scale(1.50);
+    transform: scale(1.90);
     transition: 0.5s;}
     .img1{
         justify-items: center;
         display: inline;
         margin: 5%;
-        max-width: 60%;
+        max-width: 40%;
 
 
     }
@@ -95,6 +106,7 @@
         font-size: 45px;
         text-align: center;
         margin: 1%;
+        color: rgb(215, 219, 223);
     }
     
     .seç12{
