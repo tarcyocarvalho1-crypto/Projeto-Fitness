@@ -85,13 +85,13 @@
         margin: 1%;
     }
     .item-carrossel :hover{
-    transform: scale(1.90);
+    transform: scale(1.70);
     transition: 0.5s;}
     .img1{
         justify-items: center;
         display: inline;
         margin: 5%;
-        max-width: 40%;
+        max-width: 60%;
 
 
     }
